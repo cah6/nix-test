@@ -1,9 +1,9 @@
 {
   bootstrap ? import <nixpkgs> {}
-, pinnedJsonFile
+, json
 }:
 let 
-  nixpkgs = builtins.fromJSON (builtins.readFile pinnedJsonFile);
+  nixpkgs = builtins.fromJSON (builtins.readFile json);
   src = bootstrap.fetchFromGitHub {
     owner = "NixOS";
     repo  = "nixpkgs-channels";

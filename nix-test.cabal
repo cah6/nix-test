@@ -8,6 +8,7 @@ cabal-version:       >=1.10
 executable nix-test
   main-is:             Main.hs
   build-depends:      base >=4.9
+                    , aeson
                     , containers
                     , lens
                     , text
